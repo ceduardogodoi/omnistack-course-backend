@@ -1,0 +1,6 @@
+# Apple's OS things
+.DS_Store
+
+node_modules
+
+.env
