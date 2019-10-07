@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Add dotenv to read .env keys and values
 const dotenv = require('dotenv');
@@ -19,6 +20,7 @@ mongoose.connect(process.env.DBURL, {
 // req.params = Acessar route params (para edição e delete)
 // req.body = Acessar corpo da requisição (para criação, edição)
 
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
